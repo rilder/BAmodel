@@ -1,13 +1,18 @@
 /**
  * @file mtwister.c
- * @authors  Takuji Nishimura, Makoto Matsumoto, Mutsuo Saito and Rilder Pires
+ * @author Rilder Pires
  * @version 1.0
  *
  * @section LICENSE
  *
- * Mersenne Twister Pseudo Random Number Generator
+ * Adaptation of Mersenne Twister Pseudo Random Number Generator
+ *
+ * Copyright (C) 2013, Rilder Pires.
+ * All rights reserved.
+ *
  * Copyright (C) 1997 - 2002, Makoto Matsumoto and Takuji Nishimura,
- * All rights reserved.                          
+ * All rights reserved.
+ *                          
  * Copyright (C) 2005, Mutsuo Saito,
  * All rights reserved.                          
  * 

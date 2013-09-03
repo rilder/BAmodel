@@ -1,9 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <math.h>
-#include "mtwister.h"
-#include "mtwister.c"
-
 /**
  * @file main.c
  * @author Rilder Pires
@@ -27,15 +21,15 @@
  * are met:
  * 
  *  1. Redistributions of source code must retain the above copyright
- * 	  notice, this list of conditions and the following disclaimer.
+ *     notice, this list of conditions and the following disclaimer.
  * 
  *  2. Redistributions in binary form must reproduce the above copyright
- * 	  notice, this list of conditions and the following disclaimer in the
- * 	  documentation and/or other materials provided with the distribution.
+ *     notice, this list of conditions and the following disclaimer in the
+ *     documentation and/or other materials provided with the distribution.
  * 
  *  3. The names of its contributors may not be used to endorse or promote 
- * 	  products derived from this software without specific prior written 
- * 	  permission.
+ *     products derived from this software without specific prior written 
+ *     permission.
  * 
  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
  * "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
@@ -53,12 +47,18 @@
  * 
  * This is an C implementation of Barabasi Albert algorithm coded by Rilder
  * Pires in 2013/08/30. The original idea of this algorithm was proposed by
- * Barabasi and Albert in 1999. It was decribed into a paper called
+ * A. Barabási and R. Albert in 1999. It was decribed into a paper called
  * "Emergence of Scaling in Random Networks".
  *
  * Any feedback is very welcome.
  * e-mail: rilder@fisica.ufc.br    
  */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+#include "mtwister.h"
 
 int main(){
 	int i,j,ii,cv,ok;
@@ -75,8 +75,9 @@ int main(){
 	/* Set the seed of Merssene Twister */
 	MTwister_Init(764763469);
 	
-	/* Alloc memory to keep  */
+	/* Alloc memory to keep track of the vertices that are linked with each vertex */
 	edges=(int*)calloc(m*t,sizeof(int)); 
+	/* Alloc memory to keep track of the conectivity of each vertex */
 	k=(int*)calloc(m0+t,sizeof(int));
 
 	/* Edges of the network */
